@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "nom": "Eiusmod sint quas iu",
+      "prenom": "Minus ea rerum aut s",
+      "email": "bosa@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "id": "1"
+    },
+    {
+      "nom": "Voluptas culpa quos ",
+      "prenom": "Eos mollit qui molli",
+      "email": "ponuqaxysi@mailinator.com",
+      "id": "2"
+    }
+  ],
+  "favoritesOffers": [
+    {
+      "id": "2650",
+      "userId": "2",
+      "offerId": "praktikant-human-resources-am-standort-leipzig-280299",
+      "title": "Praktikant (m/w/d) Human Resources am Standort Leipzig",
+      "company": "allaboutHRLaw GmbH",
+      "location": "Leipzig",
+      "description": "<p><strong>allaboutHRLaw</strong> GmbH ist ein dynamisches, stark wachsendes Beratungsunternehmen, welches für Start-ups, kleine und mittelständische Unternehmen ganz oder teilweise die Personalarbeit übernimmt, als HR as a service. Wir haben bereits namhafte Start-ups auf dem Weg zum „erwachsenen“ Unternehmen begleitet und betreuen unsere Kunden über Jahre hinweg. Referenzen kannst du auf unserer Website  einsehen.</p>\n<p>Wir sind ein Team von hochmotivierten bundesweit tätigen HRlern mit Fokus auf die Ballungsräume Berlin, Hamburg, Frankfurt/Main, Leipzig, Düsseldorf und München und einem coolen Büro in Leipzig, das alle internen Aufgaben abdeckt.</p>\n<h2>Aufgaben</h2>\n<p>Du hast Lust, in die Welt der Personalentwicklung einzutauchen und möchtest uns als Praktikant (m/w/d) im Bereich Human Resources tatkräftig unterstützen? Dann suchen wir genau DICH, um unser wachsendes Team zu bereichern!</p>\n<p><strong>Deine Aufgaben:</strong></p>\n<ul>\n<li><strong>Recruiting Support</strong>: Du hilfst bei der Stellenschaltung und -aktualisierung und unterstützt uns im gesamten Recruiting-Prozess.</li>\n<li><strong>Bewerbermanagement</strong>: Vom ersten Kontakt bis zum Bewerbungsgespräch – Du organisierst und koordinierst den gesamten Ablauf und nimmst aktiv am Auswahlprozess teil.</li>\n<li><strong>Administrative Tätigkeiten</strong>: Du pflegst Personalakten, bearbeitest Anfragen und kümmerst dich um die Anforderung von Personalunterlagen.</li>\n<li><strong>Onboarding</strong>: Du gestaltest unseren Onboarding-Prozess aktiv mit und unterstützt die neuen Teammitglieder bei ihrem Start.</li>\n<li><strong>Projektarbeit</strong>: Du übernimmst eigenständig kleinere Projekte und bringst frische Ideen in unsere HR-Strategien ein.</li>\n</ul>\n<h2>Qualifikation</h2>\n<p><strong>Das bringst Du mit:</strong></p>\n<ul>\n<li><strong>Strukturierte Arbeitsweise</strong>: Du arbeitest genau, selbstständig und behältst auch bei mehreren Aufgaben den Überblick.</li>\n<li><strong>Teamplayer</strong>: Du kannst gut mit anderen zusammenarbeiten und kommunizierst klar und offen.</li>\n<li><strong>Belastbarkeit und Freundlichkeit</strong>: Du bleibst auch in stressigen Phasen freundlich und lösungsorientiert.</li>\n<li><strong>Gute Office-Kenntnisse</strong>: Du beherrschst die gängigen Office-Programme und bist ein proaktiver Nutzer der digitalen Tools.</li>\n<li><strong>Zeit</strong>: Du solltest mindestens 3 Monate für das Praktikum einplanen.</li>\n<li><strong>Vorkenntnisse im HR-Bereich sind ein Plus</strong>, aber kein Muss!</li>\n</ul>\n<h2>Benefits</h2>\n<p><strong>Das bieten wir Dir:</strong></p>\n<ul>\n<li><strong>Viel Raum für Deine Ideen</strong>: Gestalte aktiv mit und bringe Deine Ideen in unser Unternehmen ein.</li>\n<li><strong>Steile Lernkurve</strong>: Du wirst eine Menge lernen und erhältst einen tiefen Einblick in die Personalabteilung.</li>\n<li><strong>Flache Hierarchien</strong>: Wir bieten ein dynamisches Arbeitsumfeld mit schnellen Entscheidungswegen und einem motivierten Team.</li>\n<li><strong>Flexibilität</strong>: Nutze flexible Arbeitszeiten, um Familie und Beruf optimal miteinander zu vereinbaren.</li>\n</ul>\n<p><strong>Du bist überzeugt?</strong></p>\n<p>Dann freuen wir uns auf Deine vollständigen Bewerbungsunterlagen per E-Mail unter Angabe des Jobtitels, des Standorts, des möglichen Eintrittsdatums und der gewünschten Praktikumsdauer.</p>\n<p><strong>Bei Fragen</strong> erreichst Du uns auch telefonisch unter 089 6429 2900 oder per E-Mail.</p>\n<p>Werde Teil unserer Erfolgsgeschichte – wir freuen uns auf Dich!</p>\n<p>Find more <a href=\"https://www.arbeitnow.com/english-speaking-jobs\">English Speaking Jobs in Germany</a> on Arbeitnow</a>",
+      "url": "https://www.arbeitnow.com/jobs/companies/allabouthrlaw-gmbh/praktikant-human-resources-am-standort-leipzig-280299",
+      "created": "2026-02-17T09:31:24.000Z",
+      "dateAdded": "2026-02-17T15:44:22.154Z"
+    }
+  ],
+  "applications": [
+    {
+      "id": "4de5",
+      "userId": "2",
+      "offerId": "praktikant-human-resources-am-standort-leipzig-280299",
+      "apiSource": "adzuna",
+      "title": "Praktikant (m/w/d) Human Resources am Standort Leipzig",
+      "company": "allaboutHRLaw GmbH",
+      "location": "Leipzig",
+      "url": "https://www.arbeitnow.com/jobs/companies/allabouthrlaw-gmbh/praktikant-human-resources-am-standort-leipzig-280299",
+      "status": "en_attente",
+      "notes": "",
+      "dateAdded": "2026-02-17T15:44:15.334Z"
+    }
+  ]
+}
