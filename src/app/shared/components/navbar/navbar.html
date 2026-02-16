@@ -1,0 +1,83 @@
+<nav class="bg-white shadow-lg sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <div class="flex-shrink-0">
+        <a routerLink="/" class="flex items-center space-x-2">
+          <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span
+            class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">JobFinder</span>
+        </a>
+      </div>
+
+      <div class="hidden md:flex items-center space-x-8">
+        <a routerLink="/" routerLinkActive="text-indigo-600" [routerLinkActiveOptions]="{exact: true}"
+          class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Accueil</a>
+        <a routerLink="/jobs" routerLinkActive="text-indigo-600"
+          class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Offres</a>
+
+        @if (isAuthenticated) {
+        <a routerLink="/favorites" routerLinkActive="text-indigo-600"
+          class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Favoris</a>
+        <a routerLink="/applications" routerLinkActive="text-indigo-600"
+          class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Candidatures</a>
+        <a routerLink="/profile" routerLinkActive="text-indigo-600"
+          class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Profil</a>
+        <button (click)="logout()"
+          class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-medium transition-all">
+          Déconnexion
+        </button>
+        } @else {
+        <a routerLink="/login" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Connexion</a>
+        <a routerLink="/register"
+          class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium transition-all">
+          Inscription
+        </a>
+        }
+      </div>
+
+      <div class="md:hidden">
+        <button (click)="toggleMenu()" class="text-gray-700 hover:text-indigo-600 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            @if (!isMenuOpen()) {
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            } @else {
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            }
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  @if (isMenuOpen()) {
+  <div class="md:hidden bg-white border-t border-gray-200">
+    <div class="px-2 pt-2 pb-3 space-y-1">
+      <a routerLink="/" (click)="toggleMenu()" routerLinkActive="bg-indigo-50 text-indigo-600"
+        [routerLinkActiveOptions]="{exact: true}"
+        class="block px-3 py-2 rounded-md text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium">Accueil</a>
+      <a routerLink="/jobs" (click)="toggleMenu()" routerLinkActive="bg-indigo-50 text-indigo-600"
+        class="block px-3 py-2 rounded-md text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium">Offres</a>
+
+      @if (isAuthenticated) {
+      <a routerLink="/favorites" (click)="toggleMenu()" routerLinkActive="bg-indigo-50 text-indigo-600"
+        class="block px-3 py-2 rounded-md text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium">Favoris</a>
+      <a routerLink="/applications" (click)="toggleMenu()" routerLinkActive="bg-indigo-50 text-indigo-600"
+        class="block px-3 py-2 rounded-md text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium">Candidatures</a>
+      <a routerLink="/profile" (click)="toggleMenu()" routerLinkActive="bg-indigo-50 text-indigo-600"
+        class="block px-3 py-2 rounded-md text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium">Profil</a>
+      <button (click)="logout()" class="w-full text-left px-3 py-2 rounded-md text-red-600 hover:bg-red-50 font-medium">
+        Déconnexion
+      </button>
+      } @else {
+      <a routerLink="/login" (click)="toggleMenu()"
+        class="block px-3 py-2 rounded-md text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium">Connexion</a>
+      <a routerLink="/register" (click)="toggleMenu()"
+        class="block px-3 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 font-medium">Inscription</a>
+      }
+    </div>
+  </div>
+  }
+</nav>
