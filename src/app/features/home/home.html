@@ -1,0 +1,88 @@
+<div class="min-h-screen">
+    <div class="relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-6">
+                    Trouvez votre <span class="text-yellow-300">emploi de rêve</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto">
+                    Recherchez parmi des milliers d'offres d'emploi provenant des meilleures entreprises du monde entier
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a routerLink="/jobs"
+                        class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-xl text-indigo-700 bg-white hover:bg-gray-50 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        Rechercher des offres
+                    </a>
+                    <a routerLink="/register"
+                        class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-lg font-medium rounded-xl text-white hover:bg-white hover:text-indigo-700 transition-all">
+                        Créer un compte
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Pourquoi JobFinder ?</h2>
+                <p class="text-xl text-gray-600">Votre partenaire pour une recherche d'emploi réussie</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div
+                    class="text-center p-8 rounded-2xl bg-gradient-to-br from-indigo-50 to-purple-50 hover:shadow-xl transition-all">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-indigo-600 rounded-full mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Recherche Avancée</h3>
+                    <p class="text-gray-600">Filtrez par mots-clés, localisation, type de contrat et salaire pour
+                        trouver l'offre parfaite</p>
+                </div>
+
+                <div
+                    class="text-center p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 hover:shadow-xl transition-all">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-purple-600 rounded-full mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Favoris</h3>
+                    <p class="text-gray-600">Sauvegardez vos offres préférées et accédez-y facilement à tout moment</p>
+                </div>
+
+                <div
+                    class="text-center p-8 rounded-2xl bg-gradient-to-br from-pink-50 to-red-50 hover:shadow-xl transition-all">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-pink-600 rounded-full mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Suivi des Candidatures</h3>
+                    <p class="text-gray-600">Gérez vos candidatures avec des statuts et des notes personnalisées</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-gradient-to-r from-indigo-600 to-purple-600 py-16">
+        <div class="max-w-4xl mx-auto text-center px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Prêt à commencer ?</h2>
+            <p class="text-xl text-white/90 mb-8">Rejoignez des milliers de chercheurs d'emploi qui ont trouvé leur
+                opportunité idéale</p>
+            <a routerLink="/register"
+                class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-xl text-indigo-700 bg-white hover:bg-gray-50 transition-all shadow-xl">
+                Créer un compte gratuitement
+            </a>
+        </div>
+    </div>
+</div>
