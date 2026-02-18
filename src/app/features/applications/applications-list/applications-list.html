@@ -1,0 +1,115 @@
+<div class="min-h-screen bg-gray-50 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-8">
+            <h1 class="text-4xl font-bold text-gray-900 mb-2">Mes Candidatures</h1>
+            <p class="text-gray-600">Suivez l'état de vos candidatures</p>
+        </div>
+
+        @if (isLoading()) {
+        <div class="flex justify-center items-center py-20">
+            <div class="text-center">
+                <div
+                    class="animate-spin border-4 border-indigo-200 border-t-indigo-600 rounded-full w-12 h-12 mx-auto mb-4">
+                </div>
+                <p class="text-gray-600">Chargement...</p>
+            </div>
+        </div>
+        }
+
+        @if (!isLoading() && applications().length > 0) {
+        <div class="grid md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg">
+                <h3 class="text-lg font-bold text-yellow-900 mb-2">En attente</h3>
+                <p class="text-3xl font-bold text-yellow-600">{{ getApplicationsByStatus('en_attente').length }}</p>
+            </div>
+            <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-lg">
+                <h3 class="text-lg font-bold text-green-900 mb-2">Accepté</h3>
+                <p class="text-3xl font-bold text-green-600">{{ getApplicationsByStatus('accepte').length }}</p>
+            </div>
+            <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-lg">
+                <h3 class="text-lg font-bold text-red-900 mb-2">Refusé</h3>
+                <p class="text-3xl font-bold text-red-600">{{ getApplicationsByStatus('refuse').length }}</p>
+            </div>
+        </div>
+
+        <div class="grid gap-6">
+            @for (app of applications(); track app.id) {
+            <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">{{ app.title }}</h3>
+                        <p class="text-lg text-indigo-600 font-semibold mb-2">{{ app.company }}</p>
+                        <p class="text-gray-600 mb-2">{{ app.location }}</p>
+                        <p class="text-sm text-gray-500">Ajouté le {{ app.dateAdded | date:'dd/MM/yyyy' }}</p>
+                    </div>
+
+                    <div class="flex flex-col items-end space-y-2">
+                        <select [value]="app.status" (change)="updateStatus(app, $any($event.target).value)"
+                            class="px-4 py-2 rounded-lg font-medium {{ getStatusColor(app.status) }} border-0 cursor-pointer">
+                            <option value="en_attente">En attente</option>
+                            <option value="accepte">Accepté</option>
+                            <option value="refuse">Refusé</option>
+                        </select>
+
+                        <button (click)="deleteApplication(app)"
+                            class="text-red-600 hover:text-red-800 text-sm font-medium">
+                            Supprimer
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <div class="flex justify-between items-center mb-2">
+                        <h4 class="font-semibold text-gray-900">Notes</h4>
+                        <button (click)="toggleEditNotes(app.id!)"
+                            class="text-indigo-600 hover:text-indigo-800 text-sm font-medium">
+                            {{ editingNotes[app.id!] ? 'Annuler' : 'Modifier' }}
+                        </button>
+                    </div>
+
+                    @if (editingNotes[app.id!]) {
+                    <div class="space-y-2">
+                        <textarea [(ngModel)]="app.notes"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                            rows="3" placeholder="Ajoutez des notes personnelles..."></textarea>
+                        <button (click)="saveNotes(app)"
+                            class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium transition-all">
+                            Enregistrer
+                        </button>
+                    </div>
+                    } @else {
+                    <p class="text-gray-700">{{ app.notes || 'Aucune note' }}</p>
+                    }
+                </div>
+
+                <div class="mt-4">
+                    <a [href]="app.url" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium">
+                        Voir l'offre
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            }
+        </div>
+        }
+
+        @if (!isLoading() && applications().length === 0) {
+        <div class="text-center py-20 bg-white rounded-2xl shadow-lg">
+            <svg class="w-24 h-24 mx-auto text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+            </svg>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Aucune candidature</h3>
+            <p class="text-gray-600 mb-6">Vous n'avez pas encore de candidatures en suivi</p>
+            <a routerLink="/jobs"
+                class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition-all">
+                Rechercher des offres
+            </a>
+        </div>
+        }
+    </div>
+</div>
